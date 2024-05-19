@@ -1,5 +1,6 @@
 const mainColors = {
   accent: '#C62E65',
+  blue: '#2F97C1',
   black: '#000000',
   white: '#FFFFFF',
   dark: '#2A2E45',
@@ -14,6 +15,7 @@ const textColors = {
 
 export const colors = {
   accent: mainColors.accent,
+  blue: mainColors.blue,
   black: mainColors.black,
   white: mainColors.white,
   dark: mainColors.dark,
