@@ -23,8 +23,8 @@ export default function GameScreen({navigation}: GameScreenProps) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.darkGrey,
     flex: 1,
+    backgroundColor: colors.darkGrey,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.accent,
     alignItems: 'center',
     padding: 10,
-    margin: 10,
+    margin: '20%',
     borderRadius: 10,
     width: '80%',
   },

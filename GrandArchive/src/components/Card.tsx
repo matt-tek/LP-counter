@@ -23,6 +23,8 @@ export default function Card(props: CardProps) {
 
 const styles = StyleSheet.create({
   card: {
+    // flex: 1,
+    // flexWrap: 'wrap',
     backgroundColor: colors.blue,
     borderRadius: 10,
     shadowColor: colors.black,
@@ -35,10 +37,10 @@ const styles = StyleSheet.create({
     elevation: 5,
     margin: 20,
     padding: 10,
-    width: '80%',
+    // width: '80%',
   },
   image: {
-    width: 'auto',
+    width: 300,
     height: 300,
     resizeMode: 'contain',
   },

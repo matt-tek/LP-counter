@@ -17,8 +17,13 @@ function App(): React.JSX.Element {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
+        {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
+        <Stack.Screen name="Home" component={GameScreen} />
+
         <Stack.Screen name="Game" component={GameScreen} />
         <Stack.Screen name="Search" component={SearchScreen} />
       </Stack.Navigator>

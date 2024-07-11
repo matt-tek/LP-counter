@@ -28,8 +28,8 @@ export default function HomeScreen({navigation}: HomeScreenProps) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.darkGrey,
     flex: 1,
+    backgroundColor: colors.darkGrey,
     justifyContent: 'center',
     alignItems: 'center',
   },

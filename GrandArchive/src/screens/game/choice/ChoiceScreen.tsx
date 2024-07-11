@@ -1,43 +1,31 @@
 import React from 'react';
-import {View, Text, StyleSheet, Animated} from 'react-native';
-import {useSharedValue} from 'react-native-reanimated';
+import {View, Text, StyleSheet} from 'react-native';
 import {colors} from '../../../global/color';
-import {assets} from '../../../global/images';
-// import {NavigationProp} from '@react-navigation/native';
-import Card from '../../../components/Card';
+import Caroussel from '../../../components/Caroussel';
 
 interface GameScreenProps {
   idPlayer: number;
 }
 
 export default function ChoiceScreen(props: GameScreenProps) {
-  const scrollXOffset = useSharedValue(0);
-  const [isFirstCard, setIsFirstCard] = React.useState(scrollXOffset.value === 0);
-  const [isLastCard, setIsLastCard] = React.useState(false);
-  const [scrollViewWidth, setScrollViewWidth] = React.useState(0);
-
-  const scrollRef = React.useRef<React.RefObject<typeof Animated.ScrollView>>(null);
-  
+  return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
         <Text style={styles.title}>Choisissez votre champion !</Text>
         <Text style={styles.text}>Joueur {props.idPlayer}</Text>
       </View>
-      <Card
-        image_path={assets.img.arisanna}
-        life={3}
-        name="nico"
-        description="toto"
-      />
+      <Caroussel />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: colors.darkGrey,
+    flex: 2,
+    flexWrap: 'wrap',
+    backgroundColor: colors.darkGrey,
     width: '100%',
-    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   title: {
     color: colors.text.light,
@@ -49,9 +37,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   textContainer: {
-    // backgroundColor: colors.accent,
     width: '100%',
     alignItems: 'center',
-    marginBottom: 20,
   },
 });
